@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-qfdc
+  namespace: mvp-demo-dev-namespace-acrs-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:900894d5be5f86190c2242153ceec58cfb74c0456887113f423d7dabe53d23fc
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
